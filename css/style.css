@@ -291,7 +291,7 @@ body {
   .navgition {
 	background-color: #fff;
 	border-top: 1px solid rgb(240, 240, 240);
-	box-shadow: 0px 7px 12.61px -2.61px rgba(0, 0, 0, 0.09);
+	box-shadow: 0px 7px 5px -2.5px rgba(0, 0, 0, 0.03);
 	padding: 15px 0;
   }
   
@@ -311,7 +311,7 @@ body {
   }
   
   .fixed-nav .nav-header {
-	padding: 10px 0;
+	padding: 15px 0 10px;
   }
   
   .fixed-header {
@@ -351,7 +351,7 @@ body {
   
   .search-input:focus {
 	outline: none;
-	border: 1px solid var(--main-color);
+	border: 1px solid var(--main-hover);
   }
   
   .top-header-list li {
@@ -383,7 +383,9 @@ body {
 	font-family: "Tajawal-Bold";
 	font-size: 13px;
   }
-  
+  html[dir="rtl"] .cart-number{
+	inset-inline-start: -7px;
+  }
   .other-side-top-header {
 	display: flex;
 	align-items: center;
@@ -424,16 +426,20 @@ body {
 	inset-inline-end: 23px;
 	outline: none;
 	transform: translateY(-50%);
-  
+  font-size: 18px;
+  color: var(--main-color);
 	background-color: transparent;
 	border: none;
   
 	padding: 0;
 	transition: 0.5s;
   }
-  
+  .search-button:hover{
+	color: var(--main-hover);
+  }
   .search-button:focus {
 	outline: none;
+	color: var(--main-hover);
   }
   
   /*                          header section                     */
@@ -1499,7 +1505,7 @@ body {
 	  min-height: 151px;
 	}
 	.fixed-header .top-header {
-	  min-height: 113px;
+	  min-height: 118px;
 	}
 	.footer-accordion {
 	  cursor: pointer;
@@ -1598,21 +1604,42 @@ body {
 	}
   
 	.features-section {
-	  grid-template-columns: repeat(1, 1fr);
-	  gap: 10px;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 0;
 	  justify-content: flex-start;
 	}
 	.feature-block:not(:last-child) {
-	  border-bottom: 1px solid #e1e1e1;
+	  border-bottom: 0;
 	  border-inline-end: 0;
 	}
 	.feature-text {
 	  max-width: 100%;
+	  align-items: center;
 	}
 	.feature-block {
-	  padding-inline-end: 30px;
+	 
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  padding: 20px;
+	  padding-inline-end: 20px;
+        padding-inline-start: 20px;
+		flex-direction: column;
+        align-items: center;
 	}
-  
+	.price{
+		flex-direction: column;
+		align-items: flex-start;
+		gap:0;
+		height: 46px;
+	}
+
+	.feature-note{
+		height: 50px;
+		text-align: center;
+	}
+	.feature-title{
+		white-space: nowrap;
+	}
 	.bannerrs-section {
 	  padding-bottom: 50px;
 	}
@@ -1659,8 +1686,7 @@ body {
   
 	.search-button {
 	  font-size: 14px;
-	  width: 30px;
-	  height: 30px;
+	  
 	}
   
 	.best-seller-section {
@@ -1732,7 +1758,7 @@ body {
 	.big-menu {
 	  text-align: start;
 	  align-items: flex-start;
-	  padding: 100px 0 0;
+	  padding: 50px 0 0;
 	  flex-direction: column;
 	}
   
